@@ -1,13 +1,15 @@
 package com.todolist.backend.service;
 
 import com.todolist.backend.model.Task;
+import com.todolist.backend.model.dto.TaskDto;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
 public interface TaskService {
-    List<Task> getAllTasks();
-    Task getTask(Long id);
-    Task addTask(Task task);
-    Task updateTask(Long id, Task task);
-    Task deleteTask(Long id);
+    ResponseEntity<List<Task>> getAllTasks();
+    Object getTask(Long id);
+    ResponseEntity<Task> addTask(TaskDto task);
+    ResponseEntity<Task> updateTask(Long id, TaskDto task);
+    ResponseEntity<Void> deleteTask(Long id);
 }
