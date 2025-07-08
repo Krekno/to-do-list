@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface TaskService {
+
     ResponseEntity<List<Task>> getAllTasks();
     Object getTask(Long id);
     ResponseEntity<Task> addTask(TaskDto task);
